@@ -1,15 +1,4 @@
 /*------------------------------------------------------------------
- * Theme Name: CRE8
- * Theme URI: https://www.brandio.io/envato/cre8
- * Author: Brandio
- * Author URI: https://www.brandio.io/
- * Description: A Bootstrap Responsive HTML5 Template
- * Version: 1.0
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Bootstrap v4.1 (http://getbootstrap.com)
- * Copyright 2019 Brandio.
- -------------------------------------------------------------------*/
-/*------------------------------------------------------------------
 [Table of contents]
 
 1. General Styles.
@@ -30,9 +19,17 @@
 16. Footer Styles
 17. Responsive Styles.
 -------------------------------------------------------------------*/
+  
 @import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
 
 @import url("https://fonts.googleapis.com/css?family=Lalezar&display=swap");
+:root {
+    --color-primary: #CCEA8D;
+    --color-black: #0D0D0D;
+    --color-white: #F2F2F2;
+    --color-red: #D90404;
+    --color-green: #CCEA8D;
+}
 /* -----------------------------------
     1 - General Styles
 ------------------------------------*/
@@ -56,12 +53,12 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     font-family: "Lalezar", cursive;
     font-size: 1.45rem;
-    color: #fff;
+    color: var(--color-white);
     text-transform: uppercase;
     padding: 1.3rem 2.1rem 1rem;
     border-radius: 10rem;
-    -webkit-box-shadow: inset 0 0 0 0.25rem #fff;
-    box-shadow: inset 0 0 0 0.25rem #fff;
+    -webkit-box-shadow: inset 0 0 0 0.25rem var(--color-white);
+    box-shadow: inset 0 0 0 0.25rem var(--color-white);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -69,32 +66,32 @@ h1, h2, h3, h4, h5, h6 {
 .cr-btn:hover, .cr-btn:focus {
     color: #232931;
     text-decoration: none;
-    -webkit-box-shadow: inset 0 0 0 3.25rem #fff;
-    box-shadow: inset 0 0 0 3.25rem #fff;
+    -webkit-box-shadow: inset 0 0 0 3.25rem var(--color-white);
+    box-shadow: inset 0 0 0 3.25rem var(--color-white);
 }
 
 .cr-btn.primary {
-    color: #fff;
-    -webkit-box-shadow: inset 0 0 0 0.28rem #4ECCA3;
-    box-shadow: inset 0 0 0 0.28rem #4ECCA3;
+    color: var(--color-white);
+    -webkit-box-shadow: inset 0 0 0 0.28rem var(--color-primary);
+    box-shadow: inset 0 0 0 0.28rem var(--color-primary);
 }
 
 .cr-btn.primary:hover, .cr-btn.primary:focus {
-    color: #fff;
-    -webkit-box-shadow: inset 0 0 0 3.25rem #4ECCA3;
-    box-shadow: inset 0 0 0 3.25rem #4ECCA3;
+    color: var(--color-white);
+    -webkit-box-shadow: inset 0 0 0 3.25rem var(--color-primary);
+    box-shadow: inset 0 0 0 3.25rem var(--color-primary);
 }
 
 .cr-btn.black {
-    color: #000;
-    -webkit-box-shadow: inset 0 0 0 0.28rem #000;
-    box-shadow: inset 0 0 0 0.28rem #000;
+    color: var(--color-black);
+    -webkit-box-shadow: inset 0 0 0 0.28rem var(--color-black);
+    box-shadow: inset 0 0 0 0.28rem var(--color-black);
 }
 
 .cr-btn.black:hover, .cr-btn.black:focus {
-    color: #fff;
-    -webkit-box-shadow: inset 0 0 0 3.25rem #000;
-    box-shadow: inset 0 0 0 3.25rem #000;
+    color: var(--color-white);
+    -webkit-box-shadow: inset 0 0 0 3.25rem var(--color-black);
+    box-shadow: inset 0 0 0 3.25rem var(--color-black);
 }
 
 .cr-btn.ex-padding {
@@ -132,7 +129,7 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #4ECCA3;
+    background-color: var(--color-primary);
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
@@ -143,7 +140,7 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #4ECCA3;
+    background-color: var(--color-primary);
     -webkit-transform-origin: center;
     -moz-transform-origin: center;
     -ms-transform-origin: center;
@@ -221,7 +218,7 @@ body.menu-open {
 }
 
 .main-menu .contant-info div a:hover, .main-menu .contant-info div a:focus {
-    color: #4ECCA3;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -252,7 +249,7 @@ body.menu-open {
 }
 
 .main-menu .menu-links ul li a:hover, .main-menu .menu-links ul li a:focus {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
 }
 
@@ -304,10 +301,22 @@ body.menu-open {
 }
 
 .cnav .logo-holder img {
-    width: 2.4rem;
+    width: 3rem;
 }
 
 .cnav .social-media {
+    display: inline-block;
+    opacity: 1;
+    pointer-events: all;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cnav .logo {
     display: inline-block;
     opacity: 1;
     pointer-events: all;
@@ -326,7 +335,7 @@ body.menu-open {
 .cnav .social-media .social-link-holder a {
     font-size: 1.2rem;
     font-family: "Lalezar", cursive;
-    color: #fff;
+    color: var(--color-white);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
@@ -337,6 +346,13 @@ body.menu-open {
 }
 
 .cnav .social-media.hide {
+    -webkit-transform: translateY(-13rem);
+    -moz-transform: translateY(-13rem);
+    -ms-transform: translateY(-13rem);
+    transform: translateY(-13rem);
+}
+
+.cnav .logo.hide {
     -webkit-transform: translateY(-13rem);
     -moz-transform: translateY(-13rem);
     -ms-transform: translateY(-13rem);
@@ -553,7 +569,7 @@ body.menu-open {
 }
 
 .extra-lg-text {
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     font-family: "Lalezar", cursive;
     font-size: 6.9rem;
@@ -567,7 +583,7 @@ body.menu-open {
 }
 
 .extra-lg-text .other-color {
-    color: #4ECCA3;
+    color: var(--color-primary);
     font-family: "Lalezar", cursive;
 }
 
@@ -625,14 +641,14 @@ body.menu-open {
 .boxy .bottom-text .link {
     font-family: "Lalezar", cursive;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.3rem;
 }
 
 .boxy .bottom-text .link a {
     font-family: "Lalezar", cursive;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.3rem;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -644,7 +660,7 @@ body.menu-open {
 }
 
 .boxy .bottom-text .text {
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.2rem;
 }
 
@@ -678,7 +694,7 @@ body.menu-open {
 }
 
 .boxy.primary-color {
-    background-color: #4ECCA3;
+    background-color: var(--color-primary);
 }
 
 .boxy.primary-color h1.title {
@@ -690,11 +706,11 @@ body.menu-open {
 }
 
 .boxy.primary-color .slg-text {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .boxy.primary-color .normal-lg-text p {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .boxy.default-color {
@@ -710,7 +726,7 @@ body.menu-open {
 }
 
 .boxy.default-color .slg-text {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .boxy.default-color .normal-lg-text p {
@@ -730,7 +746,7 @@ body.menu-open {
 }
 
 .boxy.c2-color .slg-text {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .boxy.c2-color .normal-lg-text p {
@@ -849,7 +865,7 @@ body.menu-open {
 }
 
 .lg-text {
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     font-family: "Lalezar", cursive;
     font-size: 5.3rem;
@@ -864,7 +880,7 @@ body.menu-open {
 }
 
 .lg-text .other-color {
-    color: #4ECCA3;
+    color: var(--color-primary);
     font-family: "Lalezar", cursive;
 }
 
@@ -875,7 +891,7 @@ body.menu-open {
 }
 
 .slg-text {
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     font-family: "Lalezar", cursive;
     font-size: 5rem;
@@ -890,7 +906,7 @@ body.menu-open {
 }
 
 .slg-text .other-color {
-    color: #4ECCA3;
+    color: var(--color-primary);
     font-family: "Lalezar", cursive;
 }
 
@@ -916,13 +932,13 @@ body.menu-open {
     5 - Clients Section Styles
 ------------------------------------*/
 .clients-section {
-    background-color: #fff;
+    background-color: var(--color-white);
     text-align: left;
     padding: 10rem 10rem 3rem;
 }
 
 .clients-section .lg-text {
-    color: #000;
+    color: var(--color-black);
     text-align: left;
     margin-bottom: 2.2rem;
 }
@@ -989,7 +1005,7 @@ body.menu-open {
     7 - Process Section Styles
 ------------------------------------*/
 .process-section {
-    background-color: #fff;
+    background-color: var(--color-white);
     text-align: left;
     padding: 8rem 12rem 3rem;
 }
@@ -1138,7 +1154,7 @@ body.menu-open {
     9 - Jobs Section Styles
 ------------------------------------*/
 .jobs-section {
-    background-color: #fff;
+    background-color: var(--color-white);
     text-align: left;
     padding: 10rem 10rem 3rem;
 }
@@ -1186,7 +1202,7 @@ body.menu-open {
 ------------------------------------*/
 .blog-section {
     padding: 6rem;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 .post-box {
@@ -1239,7 +1255,7 @@ body.menu-open {
     11 - Post Section Styles
 ------------------------------------*/
 .post-section {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 0;
 }
 
@@ -1357,7 +1373,7 @@ body.menu-open {
 ------------------------------------*/
 .few-contact {
     padding: 4rem 8rem;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 .few-contact .contact-info-holder {
@@ -1378,7 +1394,7 @@ body.menu-open {
 
 .few-contact .contact-info-holder .contact-info a {
     font-family: "Lalezar", cursive;
-    color: #4ECCA3;
+    color: var(--color-primary);
     font-size: 4.8rem;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -1393,7 +1409,7 @@ body.menu-open {
     13 - Jobs Section Styles
 ------------------------------------*/
 .our-people-section {
-    background-color: #fff;
+    background-color: var(--color-white);
     text-align: left;
     padding: 10rem 10rem;
 }
@@ -1458,13 +1474,13 @@ body.menu-open {
 .social-row .social-media .social-link-holder a {
     font-family: "Lalezar", cursive;
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--color-white);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .social-row .social-media .social-link-holder a:hover, .social-row .social-media .social-link-holder a:focus {
-    color: #4ECCA3;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -1472,7 +1488,7 @@ body.menu-open {
     15 - Project Info Styles
 ------------------------------------*/
 .project-info {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 6rem 8rem 2rem;
 }
 
@@ -1482,7 +1498,7 @@ body.menu-open {
 }
 
 .project-info .lg-text {
-    color: #000;
+    color: var(--color-black);
     text-align: left;
     margin-bottom: 2rem;
 }
@@ -1502,7 +1518,7 @@ body.menu-open {
 }
 
 .project-imgs {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 3.5rem;
 }
 
@@ -1524,7 +1540,7 @@ body.menu-open {
 }
 
 .footer .lg-text {
-    color: #4ECCA3;
+    color: var(--color-primary);
     margin-bottom: 2.2rem;
 }
 
@@ -1550,20 +1566,20 @@ body.menu-open {
 
 .footer .contact-info-holder .contact-info {
     font-family: "Lalezar", cursive;
-    color: #fff;
+    color: var(--color-white);
     font-size: 4.8rem;
 }
 
 .footer .contact-info-holder .contact-info a {
     font-family: "Lalezar", cursive;
-    color: #fff;
+    color: var(--color-white);
     font-size: 4.8rem;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .footer .contact-info-holder .contact-info a:hover, .footer .contact-info-holder .contact-info a:focus {
-    color: #4ECCA3;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -1588,7 +1604,7 @@ body.menu-open {
 .footer .contact-info-holder .social-media .social-link-holder a {
     font-size: 1.2rem;
     font-family: "Lalezar", cursive;
-    color: #fff;
+    color: var(--color-white);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
@@ -1603,7 +1619,7 @@ body.menu-open {
 }
 
 .footer.one-word .lg-text {
-    color: #fff;
+    color: var(--color-white);
 }
 
 /* -----------------------------------
@@ -2018,7 +2034,7 @@ body.menu-open {
     }
 
     .cnav .logo-holder img {
-        width: 2.2em;
+        width: 3em;
     }
 
     .cr-btn {
@@ -2319,7 +2335,7 @@ body.menu-open {
     }
 
     .cnav .logo-holder img {
-        width: 2rem;
+        width: 3rem;
     }
 
     .cnav .social-media {
