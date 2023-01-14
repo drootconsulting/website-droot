@@ -19,6 +19,7 @@ $(window).on("load", function() {
     
     // Selecting object to apply classes while scrolling
     var socialMedia = $('.social-media', '.cnav');
+    var logo = $('.logo', '.cnav');
     var mouseScroll = $('.mouse-scroll', '.header');
     var header = $('.header');
     var cnav = $('.cnav');
@@ -26,8 +27,10 @@ $(window).on("load", function() {
     // After the page loaded check if the window scroll is over 180px and add 'hide' class
     if(window.scrollY>180){
         socialMedia.addClass('hide');
+        logo.addClass('hide');
     }else{
         socialMedia.removeClass('hide');
+        logo.removeClass('hide');
     }
 
     // After the page loaded check if the window scroll is over 50px and add 'hide' class
@@ -46,8 +49,11 @@ $(window).on("load", function() {
     $(window).on("scroll", function(){
         if(window.scrollY>180){
             socialMedia.addClass('hide');
+            logo.addClass('hide');
         }else{
             socialMedia.removeClass('hide');
+            logo.removeClass('hide');
+
         }
         if(window.scrollY>50){
             mouseScroll.addClass('hide');
