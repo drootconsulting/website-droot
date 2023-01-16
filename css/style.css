@@ -1197,6 +1197,10 @@ body.menu-open {
     padding-bottom: 0 !important;
 }
 
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
 /* -----------------------------------
     10 - Blog Section Styles
 ------------------------------------*/
